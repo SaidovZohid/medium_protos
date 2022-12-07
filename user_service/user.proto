@@ -13,7 +13,7 @@ message User {
     string gender = 6;
     string password =7;
     string username = 8;
-    string progile_image_url = 9;
+    string profile_image_url = 9;
     string type = 10;
     string created_at = 11;
 }
