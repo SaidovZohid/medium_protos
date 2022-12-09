@@ -7,7 +7,7 @@ option go_package="genproto/notification_service";
 import "google/protobuf/empty.proto";
 
 service NotificationService {
-    rpc Register(SendEmailRequest) returns (google.protobuf.Empty) {}
+    rpc SendEmail(SendEmailRequest) returns (google.protobuf.Empty) {}
 }
 
 message SendEmailRequest {
