@@ -10,6 +10,9 @@ service AuthService {
     rpc Register(RegisterRequest) returns (google.protobuf.Empty) {}
     rpc Verify(VerifyRequest) returns (AuthResponse) {}
     rpc Login(LoginRequest) returns (AuthResponse) {}
+    rpc ForgotPassword(ForgotPasswordRequest) returns (google.protobuf.Empty) {}
+    rpc VerifyForgotPassword(VerifyRequest) returns (AuthResponse) {}
+    rpc UpdatePassword(UpdatePasswordRequest) returns (google.protobuf.Empty) {}
 }
 
 message RegisterRequest {
@@ -37,4 +40,12 @@ message AuthResponse {
     string type = 5;
     string created_at = 6;
     string access_token = 7; 
+}
+
+message ForgotPasswordRequest {
+	string email = 1;
+}
+
+message UpdatePasswordRequest  {
+	string password = 1;  
 }
