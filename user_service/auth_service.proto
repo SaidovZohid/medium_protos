@@ -61,5 +61,6 @@ message ForgotPasswordRequest {
 }
 
 message UpdatePasswordRequest  {
+    int64 user_id = 2;
 	string password = 1;  
 }
