@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package genproto;
+
+option go_package="genproto/post_service";
+
+message Comment {
+    int64 id = 1;
+    string title = 2;
+    string created_at = 3;
+}
+
+message CommentUser {
+	int64 id = 1;             
+	string first_name = 2;     
+	string last_name = 3;
+	string email = 4;         
+	string profile_image_url = 5;
+}
+
+message DeleteCommentRequest {
+    int64 id = 1;
+}
+
+message GetAllCommentsParamsReq {
+	int32  limit = 1;   
+	int32  page = 2;
+	string search = 3; 
+}
+
+message GetAllCommentsResponse {
+	repeated Comment categories = 1;
+	int64 count = 2;
+}
