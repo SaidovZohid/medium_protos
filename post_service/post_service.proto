@@ -12,4 +12,5 @@ service PostService {
     rpc Get(GetPostRequest) returns (Post) {}
     rpc Update(Post) returns (Post) {}
     rpc Delete(GetPostRequest) returns (google.protobuf.Empty) {}
+    rpc GetAll(GetPostsParamsReq) returns (GetAllPostResponse) {}
 }

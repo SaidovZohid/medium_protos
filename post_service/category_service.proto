@@ -12,4 +12,5 @@ service CategoryService {
     rpc Get(GetCategoryRequest) returns (Category) {}
     rpc Update(Category) returns (Category) {}
     rpc Delete(GetCategoryRequest) returns (google.protobuf.Empty) {}
+    rpc GetAll(GetAllCategoryParamsReq) returns (GetAllCategoryResponse) {}
 }

@@ -13,3 +13,14 @@ message Category {
 message GetCategoryRequest {
     int64 id = 1;
 }
+
+message GetAllCategoryParamsReq {
+	int32  limit = 1;   
+	int32  page = 2;
+	string search = 3; 
+}
+
+message GetAllCategoryResponse {
+	repeated Category categories = 1;
+	int64 count = 2;
+}
