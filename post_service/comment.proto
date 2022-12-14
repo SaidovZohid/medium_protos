@@ -6,8 +6,12 @@ option go_package="genproto/post_service";
 
 message Comment {
     int64 id = 1;
-    string title = 2;
-    string created_at = 3;
+	int64 post_id = 2;
+	int64 user_id = 3;
+	string description = 4;
+	string created_at = 5;
+	string updated_at = 6;
+	CommentUser user = 7;
 }
 
 message CommentUser {
@@ -18,7 +22,7 @@ message CommentUser {
 	string profile_image_url = 5;
 }
 
-message DeleteCommentRequest {
+message GetCommentRequest {
     int64 id = 1;
 }
 
@@ -29,6 +33,6 @@ message GetAllCommentsParamsReq {
 }
 
 message GetAllCommentsResponse {
-	repeated Comment categories = 1;
+	repeated Comment comments = 1;
 	int64 count = 2;
 }
